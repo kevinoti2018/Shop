@@ -57,6 +57,20 @@
       "productDescription": "better laptop",
       "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdI-kIMk4hJGTCwNXotWogYX2gvlmCckIfWtLpqe64&s",
       "id": 12
+    },
+    {
+      "productName": "a better laptop",
+      "productPrice": "230000",
+      "productDescription": "laptop",
+      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdI-kIMk4hJGTCwNXotWogYX2gvlmCckIfWtLpqe64&s",
+      "id": 18
+    },
+    {
+      "productName": "a better laptop",
+      "productPrice": "230000",
+      "productDescription": "laptop",
+      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdI-kIMk4hJGTCwNXotWogYX2gvlmCckIfWtLpqe64&s",
+      "id": 17
     }
   ]
 }

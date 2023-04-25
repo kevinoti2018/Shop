@@ -67,7 +67,14 @@ class Product{
                     
             `
         }).join("")
-       
+    //         let amountInputs = document.querySelectorAll('.amount_input')
+    //     console.log(amountInputs)
+    //     amountInputs.forEach((input) => {
+    //         console.log(input)
+    //         input.addEventListener('change', (e) => {
+    //             console.log(e.target.value)
+    //         })
+    // })
     }
     
     async deleteCartProduct(id){
