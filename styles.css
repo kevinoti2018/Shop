@@ -9,25 +9,51 @@ html {
 body {
   margin: 0;
 }
+a .cart{
+  text-decoration:none;
+  color:black;
 
-header {
+}
+
+.header {
   position: fixed;
   top: 0;
   left: 0;
-  height: 4rem;
+  height: 6rem;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background: #540075;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
 }
 
-header h1 {
+.header h1 {
   color: white;
   font-size: 2rem;
 }
 
+.header .cart{
+  font-size: 1.2rem;
+  outline:none;
+  border: none;
+  cursor: pointer;
+}
+.header .cart ion-icon{
+   font-size: 2.4rem;
+}
+.header .cart .cart-amount{
+  padding:.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  border-radius: .8rem;
+  position: relative;
+  top: -1.2rem;
+  left: -1rem;
+}
 button {
   background: #540075;
   color: white;
@@ -61,7 +87,10 @@ button:active {
   background: #790fa3;
   border-color: #790fa3;
 }
-
+.form{
+  margin-top:6rem;
+  margin-bottom:2rem;
+}
 .cart {
   margin: 5rem 2rem;
   border: 2px solid #540075;
@@ -155,4 +184,38 @@ button:active {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+}
+.cart_display{
+  margin-top: 5rem ;
+  border:1px solid black;
+  height: 29rem;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  flex-wrap: wrap;
+  /* grid-template-columns: 1fr 50px; */
+  /* width: 60%; */
+
+}
+.cart-class{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+ align-items: center;
+ gap:2rem;
+}
+.cart-class img{
+  width: 7rem;
+  object-fit:cover;
+}
+.decinc{
+  display: flex;
+  /* flex-direction: column; */
+  padding: 1rem;
+  background-color: blue;
+}
+.delete{
+  width: 10rem;
+  background-color: red;
+  color: white;
 }

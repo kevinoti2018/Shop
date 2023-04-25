@@ -2,34 +2,6 @@
   "products": [
     {
       "productName": "Pillow",
-      "productImg": "https://imgs.search.brave.com/lNzMjQ7UabEAKd7c6lzFzHM3Z6Zs1hEa7IrRfiJpt2s/rs:fit:1200:999:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvZTY5/ZjMyZGYtN2I0ZC00/OGQ2LWFjM2MtOWQ1/OTI0MTY4ZDE2XzEu/OTdhNjFjM2Y5YzFi/YWNhNzY2M2M0MDg2/MjY3YWQ2MGMuanBl/Zw",
-      "productPrice": "3000",
-      "productDescription": "A soft Pillow!!",
-      "id": 1
-    },
-    {
-      "productName": "Pillow",
-      "productPrice": "3000",
-      "productDescription": "A soft Pillow!!",
-      "productImg": "https://imgs.search.brave.com/lNzMjQ7UabEAKd7c6lzFzHM3Z6Zs1hEa7IrRfiJpt2s/rs:fit:1200:999:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvZTY5/ZjMyZGYtN2I0ZC00/OGQ2LWFjM2MtOWQ1/OTI0MTY4ZDE2XzEu/OTdhNjFjM2Y5YzFi/YWNhNzY2M2M0MDg2/MjY3YWQ2MGMuanBl/Zw",
-      "id": 6
-    },
-    {
-      "productName": "Pillow",
-      "productPrice": "3000",
-      "productDescription": "A soft Pillow!!",
-      "productImg": "https://imgs.search.brave.com/lNzMjQ7UabEAKd7c6lzFzHM3Z6Zs1hEa7IrRfiJpt2s/rs:fit:1200:999:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvZTY5/ZjMyZGYtN2I0ZC00/OGQ2LWFjM2MtOWQ1/OTI0MTY4ZDE2XzEu/OTdhNjFjM2Y5YzFi/YWNhNzY2M2M0MDg2/MjY3YWQ2MGMuanBl/Zw",
-      "id": 7
-    },
-    {
-      "productName": "Pillow",
-      "productPrice": "3000",
-      "productDescription": "A soft Pillow!!",
-      "productImg": "https://imgs.search.brave.com/lNzMjQ7UabEAKd7c6lzFzHM3Z6Zs1hEa7IrRfiJpt2s/rs:fit:1200:999:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvZTY5/ZjMyZGYtN2I0ZC00/OGQ2LWFjM2MtOWQ1/OTI0MTY4ZDE2XzEu/OTdhNjFjM2Y5YzFi/YWNhNzY2M2M0MDg2/MjY3YWQ2MGMuanBl/Zw",
-      "id": 8
-    },
-    {
-      "productName": "Pillow",
       "productPrice": "3000",
       "productDescription": "A soft Pillow!!",
       "productImg": "https://imgs.search.brave.com/lNzMjQ7UabEAKd7c6lzFzHM3Z6Zs1hEa7IrRfiJpt2s/rs:fit:1200:999:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvZTY5/ZjMyZGYtN2I0ZC00/OGQ2LWFjM2MtOWQ1/OTI0MTY4ZDE2XzEu/OTdhNjFjM2Y5YzFi/YWNhNzY2M2M0MDg2/MjY3YWQ2MGMuanBl/Zw",
@@ -48,6 +20,43 @@
       "productDescription": "mac laptop",
       "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdI-kIMk4hJGTCwNXotWogYX2gvlmCckIfWtLpqe64&s",
       "id": 13
+    },
+    {
+      "productName": "a better laptop",
+      "productPrice": "2000",
+      "productDescription": "better laptop",
+      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdI-kIMk4hJGTCwNXotWogYX2gvlmCckIfWtLpqe64&s",
+      "id": 14
+    }
+  ],
+  "cart": [
+    {
+      "productName": "a better laptop",
+      "productPrice": "222000",
+      "productDescription": "mac laptop",
+      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdI-kIMk4hJGTCwNXotWogYX2gvlmCckIfWtLpqe64&s",
+      "id": 13
+    },
+    {
+      "productName": "a better laptop",
+      "productPrice": "2000",
+      "productDescription": "better laptop",
+      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdI-kIMk4hJGTCwNXotWogYX2gvlmCckIfWtLpqe64&s",
+      "id": 12
+    },
+    {
+      "productName": "a better laptop",
+      "productPrice": "2000",
+      "productDescription": "better laptop",
+      "productImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdI-kIMk4hJGTCwNXotWogYX2gvlmCckIfWtLpqe64&s",
+      "id": 14
+    },
+    {
+      "productName": "Pillow",
+      "productPrice": "3000",
+      "productDescription": "A soft Pillow!!",
+      "productImg": "https://imgs.search.brave.com/lNzMjQ7UabEAKd7c6lzFzHM3Z6Zs1hEa7IrRfiJpt2s/rs:fit:1200:999:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvZTY5/ZjMyZGYtN2I0ZC00/OGQ2LWFjM2MtOWQ1/OTI0MTY4ZDE2XzEu/OTdhNjFjM2Y5YzFi/YWNhNzY2M2M0MDg2/MjY3YWQ2MGMuanBl/Zw",
+      "id": 9
     }
   ]
 }

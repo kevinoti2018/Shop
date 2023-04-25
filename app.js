@@ -1,3 +1,4 @@
+const amount=[]
 class Product{
     //deal with a single product
     constructor(product){
@@ -12,7 +13,7 @@ class Product{
           <h 2>${this.product.productName}</h>
           <h3> ${this.product.productDescription}</h3>
           <p>\$ ${this.product.productPrice}</p>
-          <button>Add to Cart</button>
+          <button onClick='new Product().addToCart(${this.product.id})'>Add to Cart</button>
           <button onClick='new Product().updateProduct(${this.product.id})' >update</button>
             <button onClick='new Product().deleteProduct(${this.product.id})'><ion-icon name="trash-outline"></ion-icon></button>
           </div>
@@ -20,11 +21,82 @@ class Product{
         `
         return html
     }
+    async addToCart(id){
+       
+        const response = await fetch(`http://localhost:3000/products/${id}`)
+        const product =await response.json()
+        console.log(product)
+        
+        const cartItems1 =  await fetch("http://localhost:3000/cart")
+        const cartData1 = await cartItems1.json()
+        console.log(cartData1)
+         // Check if the product already exists in the cart
+            const existingItem = cartData1.find(item => item.id === product.id)
+            if (existingItem) {
+                // If the item already exists, you can update the quantity or display an error message
+                console.log("Item already exists in cart!")
+                return
+            }
+        const cartItems =  await fetch("http://localhost:3000/cart",{method:'POST', body:JSON.stringify(product), 
+        headers:{"Content-Type":"application/json"}
+    })
+        const cartData = await cartItems.json()
+        console.log(cartData)
+
+       
+      
+
+    }
+    async getCartData(){
+        const cartItems1 =  await fetch("http://localhost:3000/cart")
+        const cartData1 = await cartItems1.json()
+        console.log(cartData1)
+         // Check if the product already exists in the cart
+            // const existingItem = cartData.find(item => item.id === product.id)
+            // if (existingItem) {
+            //     // If the item already exists, you can update the quantity or display an error message
+            //     console.log("Item already exists in cart!")
+            //     return
+            // }
+       
+        const cartDetails = document.querySelector('.cart_display')
+        cartDetails.innerHTML= cartData1.map(data=>{
+            return `<div class="cart-class"
+                    <p>${data.productName}</p>
+                    <img src='${data.productImg}' alt=${data.productName}/>
+                    <p>${data.productPrice}</p>
+                    <div class='decinc'>
+                        <input type='text' class='amount_input' value=1 />
+                    </div>
+                    <button class='delete' onClick='new Product().deleteCartProduct(${data.id})' >delete</button>
+                    </div>
+                    
+            `
+        }).join("")
+        let amountInputs = document.querySelectorAll('.amount_input')
+        console.log(amountInputs)
+        amountInputs.forEach((input) => {
+            console.log(input)
+            input.addEventListener('change', (e) => {
+                console.log(e.target.value)
+            })
+    })
+       
+
+    }
+    
+    async deleteCartProduct(id){
+        await fetch(`http://localhost:3000/cart/${id}`,{method:'DELETE', 
+        headers:{"Content-Type":"application/json"}
+    })
+    }
+  
     async deleteProduct(id){
         await fetch(`http://localhost:3000/products/${id}`,{method:'DELETE', 
         headers:{"Content-Type":"application/json"}
     })
     }
+
     async updateProduct(id){
         const response = await fetch(`http://localhost:3000/products/${id}`)
         const product =await response.json()
@@ -71,6 +143,10 @@ class Product{
 }
 const btn = document.querySelector('#btn')
 btn.addEventListener('click', new Product().addProduct)
+const cartIcon = document.querySelector('.cart')
+cartIcon.addEventListener('click', new Product().getCartData)
+
+
 class ProductList{
 //deal with all products
 async render(){
@@ -110,6 +186,43 @@ class App{
 }
 
 App.Init()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
