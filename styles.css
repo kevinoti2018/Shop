@@ -16,7 +16,7 @@ a .cart{
 }
 
 .header {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   height: 6rem;
@@ -187,14 +187,14 @@ button:active {
 }
 .cart_display{
   margin-top: 5rem ;
-  border:1px solid black;
-  height: 29rem;
+  /* border:1px solid black; */
+  /* height: 29rem; */
   display: flex;
   flex-direction: column;
   gap:2rem;
   flex-wrap: wrap;
-  /* grid-template-columns: 1fr 50px; */
-  /* width: 60%; */
+  padding:2rem;
+ 
 
 }
 .cart-class{
@@ -218,4 +218,13 @@ button:active {
   width: 10rem;
   background-color: red;
   color: white;
+}
+
+
+
+.body{
+  margin-top: 30rem;
+  /* background:red; */
+  width:100%
+
 }

@@ -1,4 +1,4 @@
-const amount=[]
+// const amount=[]
 class Product{
     //deal with a single product
     constructor(product){
@@ -50,39 +50,24 @@ class Product{
     async getCartData(){
         const cartItems1 =  await fetch("http://localhost:3000/cart")
         const cartData1 = await cartItems1.json()
-        console.log(cartData1)
-         // Check if the product already exists in the cart
-            // const existingItem = cartData.find(item => item.id === product.id)
-            // if (existingItem) {
-            //     // If the item already exists, you can update the quantity or display an error message
-            //     console.log("Item already exists in cart!")
-            //     return
-            // }
-       
+        console.log(cartData1)   
+        const totalPrice = cartData1.reduce((acc, item) => acc + parseInt(item.productPrice), 0); 
+        console.log(totalPrice)  
+        const totalPriceElem = document.querySelector(".total_price");
+        totalPriceElem.innerHTML = `Total Price: $${totalPrice}`;
         const cartDetails = document.querySelector('.cart_display')
         cartDetails.innerHTML= cartData1.map(data=>{
             return `<div class="cart-class"
                     <p>${data.productName}</p>
                     <img src='${data.productImg}' alt=${data.productName}/>
                     <p>${data.productPrice}</p>
-                    <div class='decinc'>
-                        <input type='text' class='amount_input' value=1 />
-                    </div>
+                    
                     <button class='delete' onClick='new Product().deleteCartProduct(${data.id})' >delete</button>
                     </div>
                     
             `
         }).join("")
-        let amountInputs = document.querySelectorAll('.amount_input')
-        console.log(amountInputs)
-        amountInputs.forEach((input) => {
-            console.log(input)
-            input.addEventListener('change', (e) => {
-                console.log(e.target.value)
-            })
-    })
        
-
     }
     
     async deleteCartProduct(id){
@@ -103,13 +88,14 @@ class Product{
         // pre-populate
         this.prePopulate(product)
         
-        btn.addEventListener('click',(e)=>{
-            e.preventDefault()
-            let updatedProduct = new Product().readValues()
-            console.log(updatedProduct);
-            if(btn.innerText=='Update Product'){
-                console.log('loading...');
-                 this.sendUpdate({...updatedProdut},id)
+        const btn = document.querySelector("#btn")
+        btn.addEventListener('click', (e)=>{
+         e.preventDefault()
+         
+         const updatedProduct= new Product().readValues();
+         if(btn.innerText==="Update Product"){
+             console.log("Updating");
+             this.sendUpdate({...updatedProduct, id})
             }
         })
     }
@@ -169,7 +155,7 @@ async fetchProduct(){
         return products
     }
     catch(err){
-        conole.log(err)
+        console.log(err)
     }
 }
 }
@@ -186,44 +172,4 @@ class App{
 }
 
 App.Init()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
