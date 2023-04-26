@@ -34,7 +34,7 @@ class Product{
             const existingItem = cartData1.find(item => item.id === product.id)
             if (existingItem) {
                 // If the item already exists, you can update the quantity or display an error message
-                console.log("Item already exists in cart!")
+                alert("Item already exists in cart!")
                 return
             }
         const cartItems =  await fetch("http://localhost:3000/cart",{method:'POST', body:JSON.stringify(product), 
@@ -57,12 +57,12 @@ class Product{
         totalPriceElem.innerHTML = `Total Price: $${totalPrice}`;
         const cartDetails = document.querySelector('.cart_display')
         cartDetails.innerHTML= cartData1.map(data=>{
-            return `<div class="cart-class"
-                    <p>${data.productName}</p>
+            return `<div class="cart-class">
+                  
                     <img src='${data.productImg}' alt=${data.productName}/>
                     <p>${data.productPrice}</p>
                     
-                    <button class='delete' onClick='new Product().deleteCartProduct(${data.id})' >delete</button>
+                    <button class='delete' onClick='new Product().deleteCartProduct(${data.id})'><ion-icon name="trash-outline"></ion-icon></button></button>
                     </div>
                     
             `
